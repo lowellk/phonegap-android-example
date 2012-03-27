@@ -1,8 +1,7 @@
 package com.phonegap.example;
 
-import android.app.Activity;
 import android.os.Bundle;
-import com.phonegap.*;
+import org.apache.cordova.DroidGap;
 
 public class PhoneGapExample extends DroidGap
 {

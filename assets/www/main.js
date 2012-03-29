@@ -22,7 +22,7 @@ var onDeviceReady = function() {
   document.addEventListener('pause', onPause, false);
   document.addEventListener('resume', onResume, false);
 
-  // http://docs.phonegap.com/en/1.3.0/phonegap_events_events.md.html#batterystatus
+  // http://docs.phonegap.com/en/1.5.0/phonegap_events_events.md.html#batterystatus
   window.addEventListener('batterystatus', onBatteryStatus, false);
   window.addEventListener('batterylow', onBatteryLow, false);
   window.addEventListener('batterycritical', onBatteryCritical, false);

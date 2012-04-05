@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="PhoneGapExample" default="help">
+<project name="PhoneGapExample" default="default">
 
     <!-- The local.properties file is created and updated by the 'android' tool.
          It contains the path to the SDK. It should *NOT* be checked into
@@ -45,6 +45,14 @@
             unless="sdk.dir"
     />
 
+    <target name="run">
+        <exec executable="${adb}">
+            <!-- NOTE: this needs to change if the name of our main activity changes -->
+            <arg line="shell am start -a android.intent.action.MAIN -n com.phonegap.example/.PhoneGapExample" />
+        </exec>
+    </target>
+
+    <target name="default" depends="debug, install, run" />
 
 <!-- extension targets. Uncomment the ones where you want to do custom work
      in between standard targets -->
